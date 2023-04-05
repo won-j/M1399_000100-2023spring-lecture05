@@ -18,8 +18,7 @@ USER ${NB_UID}
 
 #RUN jupyter server extension disable nbclassic  
 
-RUN R -e "install.packages(c('lobstr', 'pryr', 'gmp', 'float'), dependencies=TRUE, repos='http://cran.rstudio.com/')" 
-RUN R -e "remotes::install_github('coolbutuseless/uint8')"
+RUN R -e "install.packages(c('lobstr', 'Rlinsolve', 'SparseM', 'microbenchmark'), dependencies=TRUE, repos='http://cran.rstudio.com/')" 
 
 RUN jupyter server extension disable nbclassic  
 
